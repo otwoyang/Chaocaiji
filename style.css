@@ -1,0 +1,155 @@
+/* 超菜鸡 - mobile first, 简洁干净 */
+:root {
+  --red: #d92d20;
+  --ink: #1f2937;
+  --muted: #6b7280;
+  --line: #e5e7eb;
+  --card: #ffffff;
+  --bg: #f7f7f5;
+  --pen-blue: #2456c8;
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: -apple-system, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+  background: var(--bg);
+  color: var(--ink);
+  line-height: 1.65;
+  -webkit-text-size-adjust: 100%;
+}
+.site-header {
+  background: #111827;
+  color: #fff;
+  padding: 20px 16px 16px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.site-header h1 { margin: 0 0 4px; font-size: 1.5rem; }
+.subtitle { margin: 0 0 12px; color: #9ca3af; font-size: .85rem; }
+#search {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  background: #1f2937;
+  color: #fff;
+}
+#search::placeholder { color: #6b7280; }
+main { padding: 12px 12px 32px; max-width: 720px; margin: 0 auto; }
+.section-title { font-size: 1.15rem; margin: 18px 4px 10px; }
+
+/* 有经验徽章 */
+.badge-exp {
+  display: inline-block;
+  background: var(--red);
+  color: #fff;
+  font-size: .8rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+  vertical-align: 2px;
+  margin-right: 6px;
+}
+.tag-diy {
+  font-size: .75rem;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 6px;
+  padding: 1px 8px;
+  vertical-align: 2px;
+}
+
+/* 菜卡片 */
+.dish-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 14px;
+  margin-bottom: 14px;
+}
+.dish-card h3 { margin: 0 0 8px; font-size: 1.1rem; }
+.tried-card { border: 2px solid var(--red); }
+.tried-note {
+  background: #fef2f2;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: .85rem;
+  color: #7f1d1d;
+  margin: 0 0 10px;
+}
+.done-photo {
+  width: 100%;
+  border-radius: 10px;
+  display: block;
+  margin-bottom: 10px;
+}
+.dish-card h4 { margin: 12px 0 6px; font-size: .95rem; }
+.ing-list, .steps { margin: 0 0 8px; padding-left: 1.2em; font-size: .92rem; }
+.ing-list li, .steps li { margin-bottom: 6px; }
+
+/* 蓝色手写体批注：一词一注，就地显示 */
+.w { font-weight: 700; }
+.handnote {
+  font-family: 'Caveat', 'Segoe Script', 'Bradley Hand', cursive;
+  color: var(--pen-blue);
+  font-size: 1.12em;
+  font-style: italic;
+  line-height: 1.4;
+}
+
+/* 机器菜谱区 */
+.principle {
+  background: #fffbeb;
+  border: 1px dashed #d97706;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: .85rem;
+  margin: 0 0 12px;
+}
+.field { font-size: .88rem; margin: 6px 0; }
+.field b { color: #374151; }
+.warn {
+  display: inline-block;
+  font-size: .75rem;
+  background: #fef3c7;
+  color: #92400e;
+  border-radius: 6px;
+  padding: 1px 8px;
+  margin-left: 6px;
+  vertical-align: 2px;
+}
+.note-missing {
+  font-size: .82rem;
+  color: #92400e;
+  background: #fffbeb;
+  border-radius: 8px;
+  padding: 6px 10px;
+  margin: 8px 0 0;
+}
+.shots { display: flex; flex-direction: column; gap: 8px; margin-top: 10px; }
+.shots img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  cursor: zoom-in;
+  background: #fff;
+}
+#no-result { text-align: center; color: var(--muted); padding: 24px 0; }
+
+/* 大图查看 */
+#lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.92);
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+}
+#lightbox[hidden] { display: none; }
+#lightbox img { max-width: 100%; max-height: 100%; border-radius: 8px; }
+
+footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 16px; }
