@@ -153,3 +153,22 @@ main { padding: 12px 12px 32px; max-width: 720px; margin: 0 auto; }
 #lightbox img { max-width: 100%; max-height: 100%; border-radius: 8px; }
 
 footer { text-align: center; color: var(--muted); font-size: .8rem; padding: 16px; }
+
+/* 树状竖列（与 Map 全站统一风格）：只有菜名，点进详情 */
+.count { color: var(--muted); font-size: .95rem; }
+.tree {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: 1rem;
+  line-height: 2;
+  overflow-x: auto;
+}
+.t-row { white-space: nowrap; }
+.t-row .branch { color: var(--muted); }
+.tree a { color: var(--ink); text-decoration: none; }
+.tree a:active { color: var(--red); }
+.back-row { margin: 14px 4px 10px; }
+.back-row a { color: var(--pen-blue); text-decoration: none; font-size: .95rem; }

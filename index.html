@@ -17,43 +17,26 @@
 </header>
 
 <main>
-  <!-- 有经验：做过的菜置顶 -->
-  <section id="tried" aria-label="做过的菜">
-    <h2 class="section-title"><span class="badge-exp">有经验</span> 做过的菜</h2>
+  <!-- 列表视图：树状竖列，只有菜名 -->
+  <div id="list-view">
+    <section aria-label="做过的菜">
+      <h2 class="section-title"><span class="badge-exp">有经验</span> 做过的菜 <span id="tried-count" class="count"></span></h2>
+      <div class="tree" id="tried-list"></div>
+    </section>
 
-    <article class="dish-card tried-card">
-      <h3>可乐鸡翅 <span class="tag-diy">DIY改版</span></h3>
-      <p class="tried-note">2026-10-16 首做成功：鸡腿400g不够用香肠补量、没米饭用土豆当主食、零度可乐、葱花点睛。</p>
-      <img class="done-photo" src="images/cola-chicken-done.jpg" alt="可乐鸡翅成品" loading="lazy">
+    <section aria-label="还没做的菜">
+      <h2 class="section-title">还没做的 <span id="todo-count" class="count"></span></h2>
+      <p class="principle">💡 灵活原则：菜谱是活的，有什么用什么 —— 排骨↔鸡腿/带皮鸡胸肉、鸡翅→带皮鸡胸肉、没米饭→土豆当主食。</p>
+      <div class="tree" id="dish-list"></div>
+      <p id="no-result" hidden>没找到这道菜，换个关键词试试。</p>
+    </section>
+  </div>
 
-      <h4>食材</h4>
-      <ul class="ing-list">
-        <li><span class="w">鸡翅</span><span class="handnote">✎ 芬兰超市有时买不到鸡翅→用带皮鸡胸肉代替（带皮比纯鸡胸好吃）；不用鸡腿肉：难炖透、难去骨</span> 500克</li>
-        <li><span class="w">可乐</span><span class="handnote">✎ 零度可乐代替，味道没差别</span> 1罐（330ml）</li>
-        <li>生抽 2大勺、料酒 1大勺、姜片 5片</li>
-        <li><span class="w">土豆</span><span class="handnote">✎ 没米饭时加土豆等配菜一锅煮，没问题</span> 2个（可选配菜）</li>
-        <li><span class="w">葱花</span><span class="handnote">✎ 画龙点睛之笔，一定不能省！</span> 1根</li>
-      </ul>
-
-      <h4>做法</h4>
-      <ol class="steps">
-        <li>鸡翅对半切开（或带皮鸡胸肉切大块），冷水下锅焯水去沫，捞出。</li>
-        <li>热锅少油，下姜片爆香，下鸡肉煎至表面微黄。</li>
-        <li>加生抽、料酒翻炒上色。</li>
-        <li>倒入可乐没过食材，大火烧开转小火，盖盖15分钟。</li>
-        <li>土豆切滚刀块，中途加入同煮至软烂入味。</li>
-        <li>大火收汁至浓稠，撒葱花出锅。</li>
-      </ol>
-    </article>
-  </section>
-
-  <!-- 机器菜谱 -->
-  <section id="machine" aria-label="机器菜谱">
-    <h2 class="section-title">机器菜谱 <span id="count"></span></h2>
-    <p class="principle">💡 灵活原则：菜谱是活的，有什么用什么 —— 排骨↔鸡腿/带皮鸡胸肉、鸡翅→带皮鸡胸肉、没米饭→土豆当主食。</p>
-    <div id="dish-list"></div>
-    <p id="no-result" hidden>没找到这道菜，换个关键词试试。</p>
-  </section>
+  <!-- 详情视图：点菜名进来才看 -->
+  <div id="detail-view" hidden>
+    <p class="back-row"><a href="#" id="back-link">← 返回菜谱列表</a></p>
+    <article class="dish-card" id="detail-card"></article>
+  </div>
 </main>
 
 <div id="lightbox" hidden>
